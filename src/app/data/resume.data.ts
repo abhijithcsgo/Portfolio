@@ -35,7 +35,8 @@ export const profile = {
   location: 'Kerala, India',
   linkedin: 'https://linkedin.com/in/abhijith-cs-',
   github: 'https://github.com/abhijithcsgo',
-  resumeUrl: '/Abhijith_C_S_Resume.pdf',
+  // Relative URL so it works on GitHub Pages subpath (/Portfolio/) and locally.
+  resumeUrl: 'Abhijith_C_S_Resume.pdf',
   resumeFileName: 'Abhijith_C_S_Resume.pdf',
   summary:
     'Passionate .NET Full Stack Developer building web applications with ASP.NET, C#, Angular, JavaScript, SQL Server, and REST APIs—focused on responsive UIs, solid backends, and real-world solutions.',
