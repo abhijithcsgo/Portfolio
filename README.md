@@ -36,8 +36,11 @@ npm run build -- --base-href=/Portfolio/
 ## Deploy to GitHub Pages
 
 1. Push to the `main` branch on [github.com/abhijithcsgo/Portfolio](https://github.com/abhijithcsgo/Portfolio).
-2. In the repo: **Settings → Pages → Build and deployment → Source**: select **GitHub Actions**.
-3. The workflow `.github/workflows/deploy.yml` builds and deploys automatically on each push to `main`.
+2. Wait for the **Deploy to GitHub Pages** workflow to finish (green checkmark in [Actions](https://github.com/abhijithcsgo/Portfolio/actions)).
+3. **Enable Pages (one-time):** [Settings → Pages](https://github.com/abhijithcsgo/Portfolio/settings/pages)
+   - **Source:** Deploy from a branch
+   - **Branch:** `gh-pages` → `/ (root)` → **Save**
+4. After 1–2 minutes, visit **https://abhijithcsgo.github.io/Portfolio/**
 
 ## Customize content
 
