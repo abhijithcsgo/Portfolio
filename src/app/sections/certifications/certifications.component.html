@@ -1,0 +1,14 @@
+<section class="section section--compact" id="certifications">
+  <app-section-heading tag="Certifications" title="Continuous learning" />
+
+  <div class="certs__grid">
+    @for (cert of certs; track cert) {
+      <p-card>
+        <div class="cert__item">
+          <i class="pi pi-verified cert__icon"></i>
+          <span>{{ cert }}</span>
+        </div>
+      </p-card>
+    }
+  </div>
+</section>

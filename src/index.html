@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" class="app-dark">
+  <head>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('portfolio-theme') === 'light') {
+            document.documentElement.classList.remove('app-dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <title>Abhijith C S | Full Stack .NET Developer</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Abhijith C S — Full Stack .NET Developer specializing in ASP.NET Core, SQL Server, and enterprise applications."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.svg" />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

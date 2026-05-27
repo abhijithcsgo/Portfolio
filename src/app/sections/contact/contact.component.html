@@ -1,0 +1,36 @@
+<section class="section" id="contact">
+  <p-card class="contact__card">
+    <app-section-heading
+      tag="Contact"
+      title="Let's work together"
+      subtitle="Open to full-time roles and interesting .NET projects."
+    />
+
+    <div class="contact__actions">
+      <a [href]="profile.resumeUrl" [download]="profile.resumeFileName">
+        <p-button label="Download Resume" icon="pi pi-download" size="large" />
+      </a>
+      <a [href]="'mailto:' + profile.email">
+        <p-button label="Email Me" icon="pi pi-envelope" size="large" severity="secondary" [outlined]="true" />
+      </a>
+      <a [href]="'tel:' + profile.phone.replace(' ', '')">
+        <p-button label="Call" icon="pi pi-phone" severity="secondary" [outlined]="true" size="large" />
+      </a>
+      <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer">
+        <p-button label="LinkedIn" icon="pi pi-linkedin" severity="help" [outlined]="true" size="large" />
+      </a>
+      <a [href]="profile.github" target="_blank" rel="noopener noreferrer">
+        <p-button label="GitHub" icon="pi pi-github" severity="contrast" [outlined]="true" size="large" />
+      </a>
+    </div>
+
+    <div class="contact__details">
+      <span><i class="pi pi-envelope"></i> {{ profile.email }}</span>
+      <span><i class="pi pi-phone"></i> {{ profile.phone }}</span>
+      <span><i class="pi pi-map-marker"></i> {{ profile.location }}</span>
+      <a [href]="profile.github" target="_blank" rel="noopener noreferrer" class="contact__github">
+        <i class="pi pi-github"></i> github.com/abhijithcsgo
+      </a>
+    </div>
+  </p-card>
+</section>

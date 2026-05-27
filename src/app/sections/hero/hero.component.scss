@@ -1,0 +1,87 @@
+.hero {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0 4rem;
+}
+
+.hero__badge {
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.hero__title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__highlight {
+  background: linear-gradient(135deg, var(--p-primary-400), var(--p-primary-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--p-primary-400);
+  margin: 0 0 1rem;
+}
+
+.hero__summary {
+  max-width: 42rem;
+  color: var(--p-text-muted-color);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  max-width: 36rem;
+}
+
+.hero__stat-card {
+  :host ::ng-deep .p-card-body {
+    padding: 1.25rem;
+  }
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  i {
+    color: var(--p-primary-400);
+    font-size: 1.25rem;
+  }
+}
+
+.hero__stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--p-primary-300);
+}
+
+.hero__stat-label {
+  font-size: 0.8125rem;
+  color: var(--p-text-muted-color);
+}

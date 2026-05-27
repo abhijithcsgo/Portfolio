@@ -1,0 +1,29 @@
+<section class="section experience" id="experience">
+  <app-section-heading
+    tag="Experience"
+    title="Professional journey"
+    subtitle="Enterprise development with measurable impact."
+  />
+
+  <p-timeline [value]="jobs" align="left" styleClass="experience-timeline">
+    <ng-template #marker>
+      <span class="timeline-marker"><i class="pi pi-briefcase"></i></span>
+    </ng-template>
+    <ng-template #content let-job>
+      <p-card>
+        <div class="exp__header">
+          <div>
+            <h3>{{ job.role }}</h3>
+            <p class="exp__company">{{ job.company }} · {{ job.location }}</p>
+          </div>
+          <p-tag [value]="job.period" severity="info" />
+        </div>
+        <ul class="exp__list">
+          @for (point of job.highlights; track point) {
+            <li>{{ point }}</li>
+          }
+        </ul>
+      </p-card>
+    </ng-template>
+  </p-timeline>
+</section>

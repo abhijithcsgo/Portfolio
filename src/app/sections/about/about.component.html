@@ -1,0 +1,48 @@
+<section class="section" id="about">
+  <app-section-heading
+    tag="About"
+    title="Who I am"
+    subtitle="Full-stack developer passionate about practical, user-friendly software."
+  />
+
+  <div class="about__grid">
+    <p-card class="about__bio">
+      @for (paragraph of aboutParagraphs; track paragraph) {
+        <p class="about__paragraph">{{ paragraph }}</p>
+      }
+    </p-card>
+
+    <div class="about__info">
+      <p-card>
+        <div class="info-row">
+          <span class="info-row__label"><i class="pi pi-map-marker"></i> Location</span>
+          <span>{{ profile.location }}</span>
+        </div>
+      </p-card>
+      <p-card>
+        <div class="info-row">
+          <span class="info-row__label"><i class="pi pi-envelope"></i> Email</span>
+          <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+        </div>
+      </p-card>
+      <p-card>
+        <div class="info-row">
+          <span class="info-row__label"><i class="pi pi-phone"></i> Phone</span>
+          <a [href]="'tel:' + profile.phone.replace(' ', '')">{{ profile.phone }}</a>
+        </div>
+      </p-card>
+      <p-card>
+        <div class="info-row">
+          <span class="info-row__label"><i class="pi pi-linkedin"></i> LinkedIn</span>
+          <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer">abhijith-cs-</a>
+        </div>
+      </p-card>
+      <p-card>
+        <div class="info-row">
+          <span class="info-row__label"><i class="pi pi-github"></i> GitHub</span>
+          <a [href]="profile.github" target="_blank" rel="noopener noreferrer">abhijithcsgo</a>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="section" id="education">
+  <app-section-heading tag="Education" title="Academic background" />
+
+  <p-card>
+    <div class="edu__header">
+      <div>
+        <h3>{{ edu.degree }}</h3>
+        <p>{{ edu.school }}</p>
+        <p class="edu__affiliation">{{ edu.affiliation }}</p>
+      </div>
+      <div class="edu__meta">
+        <p-tag [value]="edu.period" severity="secondary" />
+        <span><i class="pi pi-map-marker"></i> {{ edu.location }}</span>
+      </div>
+    </div>
+  </p-card>
+</section>

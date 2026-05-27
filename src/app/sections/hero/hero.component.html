@@ -1,0 +1,37 @@
+<section class="hero" id="hero">
+  <p-tag value="Available for opportunities" severity="success" icon="pi pi-circle-fill" class="hero__badge" />
+
+  <h1 class="hero__title">
+    Hi, I'm <span class="hero__highlight">{{ profile.name }}</span>
+  </h1>
+  <p class="hero__subtitle">{{ profile.title }}</p>
+  <p class="hero__summary">{{ profile.summary }}</p>
+
+  <div class="hero__actions">
+    <p-button label="View Projects" icon="pi pi-folder-open" (onClick)="goToProjects()" />
+    <a [href]="profile.resumeUrl" [download]="profile.resumeFileName">
+      <p-button label="Download Resume" icon="pi pi-download" severity="contrast" />
+    </a>
+    <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer">
+      <p-button label="LinkedIn" icon="pi pi-linkedin" severity="secondary" [outlined]="true" />
+    </a>
+    <a [href]="profile.github" target="_blank" rel="noopener noreferrer">
+      <p-button label="GitHub" icon="pi pi-github" severity="secondary" [outlined]="true" />
+    </a>
+    <a [href]="'mailto:' + profile.email">
+      <p-button [label]="profile.email" icon="pi pi-envelope" [text]="true" />
+    </a>
+  </div>
+
+  <div class="hero__stats">
+    @for (stat of stats; track stat.label) {
+      <p-card class="hero__stat-card">
+        <div class="hero__stat">
+          <i [class]="stat.icon"></i>
+          <span class="hero__stat-value">{{ stat.value }}</span>
+          <span class="hero__stat-label">{{ stat.label }}</span>
+        </div>
+      </p-card>
+    }
+  </div>
+</section>

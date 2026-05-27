@@ -1,0 +1,27 @@
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+}
+
+.app-shell__bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 0%, black, transparent);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.25s ease;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}

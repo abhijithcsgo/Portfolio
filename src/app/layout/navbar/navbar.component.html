@@ -1,0 +1,27 @@
+<p-menubar [model]="menuItems" class="navbar">
+  <ng-template #start>
+    <button type="button" class="navbar__brand" (click)="scrollTop()">
+      <img class="navbar__logo" src="favicon.svg" width="32" height="32" alt="Portfolio logo" />
+      <span class="navbar__name">{{ profile.name.split(' ')[0] }}</span>
+    </button>
+  </ng-template>
+  <ng-template #end>
+    <div class="navbar__end">
+      <p-button
+        [icon]="theme.isDark() ? 'pi pi-sun' : 'pi pi-moon'"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+        (onClick)="theme.toggle()"
+        [attr.aria-label]="theme.isDark() ? 'Switch to light theme' : 'Switch to dark theme'"
+        [title]="theme.isDark() ? 'Light mode' : 'Dark mode'"
+      />
+      <a [href]="profile.resumeUrl" [download]="profile.resumeFileName">
+        <p-button label="Resume" icon="pi pi-download" severity="secondary" [outlined]="true" size="small" />
+      </a>
+      <a [href]="'mailto:' + profile.email">
+        <p-button label="Hire Me" icon="pi pi-send" size="small" />
+      </a>
+    </div>
+  </ng-template>
+</p-menubar>

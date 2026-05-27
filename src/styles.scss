@@ -1,0 +1,39 @@
+@use 'styles/light-theme';
+@import 'primeicons/primeicons.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--p-font-family);
+  background: var(--p-surface-ground);
+  color: var(--p-text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.section {
+  padding: 4rem 0;
+  scroll-margin-top: 5rem;
+}
+
+.section--compact {
+  padding: 3rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

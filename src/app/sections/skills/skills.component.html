@@ -1,0 +1,25 @@
+<section class="section" id="skills">
+  <app-section-heading
+    tag="Skills"
+    title="Technical expertise"
+    subtitle="Core strengths and tools I work with daily."
+  />
+
+  <div class="skills__chips">
+    @for (skill of expertise; track skill) {
+      <p-chip [label]="skill" />
+    }
+  </div>
+
+  <div class="skills__grid">
+    @for (item of toolCategories; track item[0]) {
+      <p-card [header]="item[0]">
+        <div class="skills__list">
+          @for (tool of item[1]; track tool) {
+            <span>{{ tool }}</span>
+          }
+        </div>
+      </p-card>
+    }
+  </div>
+</section>

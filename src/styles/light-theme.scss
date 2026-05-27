@@ -1,0 +1,306 @@
+// Light theme overrides only — dark theme (.app-dark) is unchanged.
+
+:root:not(.app-dark) {
+  --light-text: #0f172a;
+  --light-text-muted: #475569;
+  --light-text-subtle: #64748b;
+  --light-accent: #0369a1;
+  --light-accent-hover: #0284c7;
+  --light-accent-soft: #e0f2fe;
+  --light-border: #e2e8f0;
+  --light-surface: #ffffff;
+  --light-surface-muted: #f8fafc;
+  --light-gradient-start: #0284c7;
+  --light-gradient-end: #4338ca;
+}
+
+:root:not(.app-dark) body {
+  color: var(--light-text);
+  background: var(--light-surface-muted);
+}
+
+// —— Navbar ——
+:root:not(.app-dark) .navbar.p-menubar {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: var(--light-border) !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+:root:not(.app-dark) .navbar .p-menubar-item-link,
+:root:not(.app-dark) .navbar .p-menubar-item-content,
+:root:not(.app-dark) .navbar .p-menubar-item-label,
+:root:not(.app-dark) .navbar .p-menubar-item-icon,
+:root:not(.app-dark) .navbar__brand,
+:root:not(.app-dark) .navbar__name {
+  color: var(--light-text) !important;
+}
+
+:root:not(.app-dark) .navbar .p-menubar-item-link:hover,
+:root:not(.app-dark) .navbar .p-menubar-item:not(.p-disabled) > .p-menubar-item-content:hover {
+  color: var(--light-accent) !important;
+  background: var(--light-accent-soft) !important;
+}
+
+// —— Hero ——
+:root:not(.app-dark) .hero__title {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .hero__highlight {
+  background: linear-gradient(135deg, var(--light-gradient-start), var(--light-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+:root:not(.app-dark) .hero__subtitle {
+  color: var(--light-accent);
+}
+
+:root:not(.app-dark) .hero__summary {
+  color: var(--light-text-muted);
+}
+
+:root:not(.app-dark) .hero__stat i {
+  color: var(--light-accent);
+}
+
+:root:not(.app-dark) .hero__stat-value {
+  color: var(--light-accent);
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
+:root:not(.app-dark) .hero__stat-label {
+  color: var(--light-text-subtle);
+}
+
+:root:not(.app-dark) .hero__stat-card .p-card {
+  background: var(--light-surface) !important;
+  border-color: var(--light-border) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+// —— Section headings ——
+:root:not(.app-dark) .section-heading__tag {
+  color: var(--light-accent);
+}
+
+:root:not(.app-dark) .section-heading__title {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .section-heading__subtitle {
+  color: var(--light-text-muted);
+}
+
+:root:not(.app-dark) .p-divider {
+  --p-divider-border-color: var(--light-border);
+}
+
+// —— Cards (global) ——
+:root:not(.app-dark) .p-card {
+  background: var(--light-surface) !important;
+  color: var(--light-text) !important;
+  border-color: var(--light-border) !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+:root:not(.app-dark) .p-card .p-card-title,
+:root:not(.app-dark) .p-card .p-card-subtitle {
+  color: var(--light-text) !important;
+}
+
+:root:not(.app-dark) .p-card p,
+:root:not(.app-dark) .p-card li,
+:root:not(.app-dark) .p-card span:not(.p-chip-label) {
+  color: inherit;
+}
+
+// —— About ——
+:root:not(.app-dark) .info-row__label {
+  color: var(--light-text-subtle);
+}
+
+:root:not(.app-dark) .info-row span:not(.info-row__label) {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .info-row a {
+  color: var(--light-accent);
+
+  &:hover {
+    color: var(--light-accent-hover);
+  }
+}
+
+// —— Skills ——
+:root:not(.app-dark) .skills__category .p-card-header,
+:root:not(.app-dark) .skills__category h3 {
+  color: var(--light-accent) !important;
+}
+
+:root:not(.app-dark) .skills__list span {
+  color: var(--light-text-muted) !important;
+
+  &::before {
+    color: var(--light-accent) !important;
+  }
+}
+
+:root:not(.app-dark) .p-chip {
+  background: var(--light-accent-soft) !important;
+  color: var(--light-accent) !important;
+  border: 1px solid #bae6fd !important;
+}
+
+:root:not(.app-dark) .p-chip .p-chip-label {
+  color: var(--light-accent) !important;
+}
+
+// —— Experience ——
+:root:not(.app-dark) .exp__header h3 {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .exp__company {
+  color: var(--light-text-muted) !important;
+}
+
+:root:not(.app-dark) .exp__list li {
+  color: var(--light-text-muted) !important;
+}
+
+:root:not(.app-dark) .exp__list li::before {
+  background: var(--light-accent);
+}
+
+:root:not(.app-dark) .exp__header {
+  border-bottom-color: var(--light-border) !important;
+}
+
+:root:not(.app-dark) .timeline-marker {
+  background: var(--light-accent) !important;
+  color: #fff !important;
+}
+
+:root:not(.app-dark) .p-timeline-event-connector {
+  background: var(--light-border) !important;
+}
+
+// —— Projects ——
+:root:not(.app-dark) .project__header h3 {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .project__index {
+  color: var(--light-accent);
+}
+
+:root:not(.app-dark) .project__desc {
+  color: var(--light-text-muted) !important;
+}
+
+:root:not(.app-dark) .project__points li {
+  color: var(--light-text-muted) !important;
+  border-left-color: var(--light-border) !important;
+}
+
+// —— Education ——
+:root:not(.app-dark) .edu__header h3 {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .edu__header p,
+:root:not(.app-dark) .edu__affiliation {
+  color: var(--light-text-muted) !important;
+}
+
+:root:not(.app-dark) .edu__meta span {
+  color: var(--light-text-subtle) !important;
+}
+
+// —— Certifications ——
+:root:not(.app-dark) .cert__item span {
+  color: var(--light-text);
+}
+
+:root:not(.app-dark) .cert__icon {
+  color: var(--light-accent) !important;
+}
+
+// —— Contact ——
+:root:not(.app-dark) .contact__details {
+  color: var(--light-text-muted);
+}
+
+:root:not(.app-dark) .contact__details i {
+  color: var(--light-accent);
+}
+
+:root:not(.app-dark) .contact__github {
+  color: var(--light-text-muted);
+
+  &:hover {
+    color: var(--light-accent);
+  }
+}
+
+// —— Footer ——
+:root:not(.app-dark) .footer {
+  color: var(--light-text-muted);
+  border-top-color: var(--light-border) !important;
+}
+
+:root:not(.app-dark) .footer .p-button {
+  color: var(--light-text-muted) !important;
+}
+
+// —— Tags & buttons ——
+:root:not(.app-dark) .p-tag.p-tag-success {
+  background: #dcfce7 !important;
+  color: #166534 !important;
+}
+
+:root:not(.app-dark) .p-tag.p-tag-info {
+  background: var(--light-accent-soft) !important;
+  color: var(--light-accent) !important;
+}
+
+:root:not(.app-dark) .p-tag.p-tag-secondary {
+  background: #f1f5f9 !important;
+  color: var(--light-text-muted) !important;
+}
+
+:root:not(.app-dark) .p-button.p-button-text.p-button-secondary {
+  color: var(--light-text-muted) !important;
+
+  &:hover {
+    color: var(--light-accent) !important;
+    background: var(--light-accent-soft) !important;
+  }
+}
+
+:root:not(.app-dark) .p-button.p-button-outlined {
+  border-color: #94a3b8 !important;
+  color: var(--light-text) !important;
+
+  &:hover {
+    background: var(--light-accent-soft) !important;
+    border-color: var(--light-accent) !important;
+    color: var(--light-accent) !important;
+  }
+}
+
+:root:not(.app-dark) .p-scrolltop {
+  background: var(--light-accent) !important;
+  color: #fff !important;
+}
+
+// —— Background grid ——
+:root:not(.app-dark) .app-shell__bg {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  opacity: 0.5;
+}

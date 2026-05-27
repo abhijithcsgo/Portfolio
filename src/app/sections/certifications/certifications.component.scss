@@ -1,0 +1,22 @@
+.certs__grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .certs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cert__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cert__icon {
+  font-size: 1.25rem;
+  color: var(--p-primary-400);
+  flex-shrink: 0;
+}
