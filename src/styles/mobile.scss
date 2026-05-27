@@ -1,0 +1,34 @@
+/* Mobile & tablet only — desktop/laptop layout unchanged (min-width: 992px) */
+
+@media (max-width: 991px) {
+  main.container {
+    padding-bottom: 5rem;
+  }
+
+  /* Scroll-to-top: smaller, corner position, room for content */
+  .app-scrolltop.p-scrolltop {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+    right: 0.75rem !important;
+    z-index: 900 !important;
+  }
+
+  .app-scrolltop.p-scrolltop .p-scrolltop-sticky.p-link {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  main.container {
+    padding-bottom: 5.5rem;
+  }
+
+  .app-scrolltop.p-scrolltop {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px)) !important;
+    right: 0.5rem !important;
+  }
+}

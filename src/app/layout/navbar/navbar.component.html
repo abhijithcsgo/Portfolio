@@ -16,11 +16,18 @@
         [attr.aria-label]="theme.isDark() ? 'Switch to light theme' : 'Switch to dark theme'"
         [title]="theme.isDark() ? 'Light mode' : 'Dark mode'"
       />
-      <a [href]="profile.resumeUrl" [download]="profile.resumeFileName">
-        <p-button label="Resume" icon="pi pi-download" severity="secondary" [outlined]="true" size="small" />
+      <a [href]="profile.resumeUrl" [download]="profile.resumeFileName" class="navbar__link">
+        <p-button
+          label="Resume"
+          icon="pi pi-download"
+          severity="secondary"
+          [outlined]="true"
+          size="small"
+          styleClass="navbar__btn-resume"
+        />
       </a>
-      <a [href]="'mailto:' + profile.email">
-        <p-button label="Hire Me" icon="pi pi-send" size="small" />
+      <a [href]="'mailto:' + profile.email" class="navbar__link">
+        <p-button label="Hire Me" icon="pi pi-send" size="small" styleClass="navbar__btn-hire" />
       </a>
     </div>
   </ng-template>
